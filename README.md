@@ -1,11 +1,16 @@
 # Neuroscience Project 1: Numerical simulation of a model neuron
 Tasks:
 
-Description of a neuron, numerical simulation of the Izhikevich Neuron model neuron: solving the system of differential equations using the Runge Kutta 4th order method, analyzing the correctness of choosing the time step.
-Analyzing different regimes of a neuron dynamics, plotting time series and phase portraits of the signal, calculation of a regime map.
-Adding Gaussian noise to the system, solving the system of differential equations with noise, analyzing the influence of noise amplitude on the system dynamics.
-Adding the coupling between 2 neurons, analyzing synchronization between neurons for different values of the coupling strength.
-Simulation of a neural network with global topology, analyzing the influence of external stimulus and noise amplitude by calculating characteristic correlation time.
+1. Description of a neuron, numerical simulation of the Izhikevich Neuron model neuron: solving the system of differential equations using the Runge Kutta 4th order method, analyzing the correctness of choosing the time step.
+
+2. Analyzing different regimes of a neuron dynamics, plotting time series and phase portraits of the signal, calculation of a regime map.
+
+3. Adding Gaussian noise to the system, solving the system of differential equations with noise, analyzing the influence of noise amplitude on the system dynamics.
+
+4. Adding the coupling between 2 neurons, analyzing synchronization between neurons for different values of the coupling strength.
+5. Simulation of a neural network with global topology, analyzing the influence of external stimulus and noise amplitude by calculating characteristic correlation time.
+
+
 Additional materials:
 
 Model: https://www.izhikevich.org/publications/spikes.pdf, eq. (1-3)
