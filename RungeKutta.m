@@ -5,7 +5,6 @@ function [f]=RungeKutta(t,dt,f0,const,fun)
 % const - constant values for the function to be integrated
 % fun - function to be integrated. Requirement form for the function:
 %       [double 1xN]=fun(t,f,const)
-
 n=round(t/dt);
 m=max(size(f0));
 f=zeros(n,m+1);
