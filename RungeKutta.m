@@ -1,4 +1,4 @@
-function [f]=RungeKutta(t,dt,f0,const,fun,add_func)
+function [f,dfdt]=RungeKutta(t,dt,f0,const,fun,add_func)
 % t - integration time
 % dt - time step for integration
 % f0 - mean of function in zero time step
@@ -8,6 +8,7 @@ function [f]=RungeKutta(t,dt,f0,const,fun,add_func)
 n=round(t/dt);
 m=max(size(f0));
 f=zeros(n,m+1);
+dfdt=zeros(n,m+1);
 f(1,1:m+1)=[0,f0];
 t_i=0;
 f_i=f0;
@@ -17,8 +18,10 @@ for i=2:n
     k3=dt*fun(t+dt/2,f(i-1,2:m+1)+k2,const);
     k4=dt*fun(t+dt,f(i-1,2:m+1)+k3,const);
     t_i=t_i+dt;
-    f_i=f_i+1/6*(k1+2*k2+2*k3+k4);
+    dfdt_i=1/6*(k1+2*k2+2*k3+k4);
+    f_i=f_i+dfdt_i;
     f_i=add_func(t,f_i,const);
     f(i,1:m+1)=[t_i,f_i];
+    dfdt(i,1:m+1)=[t_i,dfdt_i];
 end
 end
