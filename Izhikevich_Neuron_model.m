@@ -13,3 +13,4 @@ function dfdt = Izhikevich_Neuron_model(t,f,const)
     
     dfdt=[dv,du];
 end
+
