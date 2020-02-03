@@ -1,12 +1,17 @@
 function []=Visualization(x,y,xname,yname,titlename,xlim_value,ylim_value,legenda)
 figure();
 [a,b]=size(y);
+[c,d]=size(x);
 if b==1
     plot(x,y,'r')
 else
     hold on
     for i=1:b
-        plot(x,y(:,i))
+        if d==b
+            plot(x(:,i),y(:,i))
+        else
+            plot(x,y(:,i))
+        end
     end
     legend(legenda)
 end
