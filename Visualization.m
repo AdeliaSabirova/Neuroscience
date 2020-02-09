@@ -13,7 +13,9 @@ else
             plot(x,y(:,i))
         end
     end
-    legend(legenda)
+    if ~isempty(legenda)
+        legend(legenda)
+    end
 end
 title(titlename)
 xlabel(xname)
