@@ -9,7 +9,7 @@ function dfdt = Izhikevich_Neuron_model_with_noise(t,f,const)
     D=const(6);
     v=f(1);
     u=f(2);
-    dv=0.04*v^2+5*v+140-u+I+D*wgn(1,1,0);
+    dv=0.04*v^2+5*v+140-u+I;
     du=a*(b*v-u);
     
     dfdt=[dv,du];
