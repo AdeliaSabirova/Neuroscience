@@ -8,7 +8,7 @@ if task==1
     add_func=@After_spike_reset;
     [f,dfdt]=RungeKutta(t,dt,f0,const,fun,add_func);
     Visualization(f(:,1),f(:,2),"t, ms","v(t), mV",dynamics+". Membrane potential versus time.",[0 t],[-100 35],[]);
-    Visualization(f(:,1),f(:,2),"t, ms","v(t), mV",dynamics+". Membrane potential versus time.",[],[],[]);
+%     Visualization(f(:,1),f(:,2),"t, ms","v(t), mV",dynamics+". Membrane potential versus time.",[],[],[]);
 elseif task==2
     c=const(1);
     d=const(2);
