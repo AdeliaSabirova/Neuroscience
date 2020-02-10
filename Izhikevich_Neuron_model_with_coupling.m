@@ -21,7 +21,7 @@ function dfdt = Izhikevich_Neuron_model_with_coupling(t,f,const)
             end
         end
         
-        dv=0.04*v^2+5*v+140-u+I+D*wgn(1,1,0)+coupling;
+        dv=0.04*v^2+5*v+140-u+I+coupling;
         du=a*(b*v-u);
         
         dfdt(i)=dv;
