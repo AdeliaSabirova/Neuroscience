@@ -20,5 +20,5 @@ for i=1:length(tau)
     R = corrcoef(y_t,y_ttau);
     C(i)=R(1,2);
 end
-tau_c=sum(C.^2);
+tau_c=sum(C.^2)*length(tau)*dtau;
 end

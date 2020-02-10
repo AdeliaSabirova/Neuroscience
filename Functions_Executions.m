@@ -24,6 +24,7 @@ elseif task==3
     fun=@Izhikevich_Neuron_model_with_noise;
     add_func=@After_spike_reset;
     [f,dfdt]=RungeKutta(t,dt,f0,const,fun,add_func);
+    const(6)=0;
     [f_n,dfdt_n]=RungeKutta(t,dt,f0,const,@Izhikevich_Neuron_model,add_func);
      Visualization(f(:,1),[f(:,2),f_n(:,2)],"t, ms","v(t), mV",dynamics+". Membrane potential versus time.",[0 t],[-100 35],["With noise","Without noise"]);
      Visualization([f(:,2),f_n(:,2)],[f(:,3),f_n(:,3)],"v(t), mV","u(t), mV",dynamics+". Phase portrait.",[],[],["With noise","Without noise"]);   
